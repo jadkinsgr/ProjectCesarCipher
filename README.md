@@ -2,6 +2,9 @@
 
 A beautiful, modern web-based Caesar cipher generator with both client-side and server-side implementations. This application provides an intuitive interface for encrypting and decrypting text using the ancient Caesar cipher technique.
 
+[Check out the hosted site: Project Cesar Cipher](https://jadkinsgr.github.io/ProjectCesarCipher/)
+
+
 ## ✨ Features
 
 - **🎨 Modern UI**: Colorful, intricate design with smooth animations
