@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Generator - Free Online Encryption Tool</title>
+    <meta name="description" content="A beautiful, modern Caesar cipher generator with colorful UI. Encrypt and decrypt text using the ancient Caesar cipher technique. Free online cryptography tool.">
+    <meta name="keywords" content="caesar cipher, encryption, decryption, cryptography, cipher tool, online encryption, text encryption">
+    <meta name="author" content="Caesar Cipher Generator">
+    <meta property="og:title" content="Caesar Cipher Generator - Free Online Encryption Tool">
+    <meta property="og:description" content="A beautiful, modern Caesar cipher generator with colorful UI. Encrypt and decrypt text using the ancient Caesar cipher technique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/caesar-cipher-generator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Caesar Cipher Generator">
+    <meta name="twitter:description" content="A beautiful, modern Caesar cipher generator with colorful UI.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <span class="title-main">Caesar Cipher</span>
+                <span class="title-sub">Generator</span>
+            </h1>
+            <p class="subtitle">Transform your text with the ancient art of cryptography</p>
+        </div>
+
+        <div class="cipher-container">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="inputText" class="label">Enter your message:</label>
+                    <textarea id="inputText" class="text-input" placeholder="Type your secret message here..." rows="4"></textarea>
+                </div>
+                
+                <div class="controls">
+                    <div class="shift-control">
+                        <label for="shiftValue" class="label">Shift Value:</label>
+                        <div class="shift-input-container">
+                            <input type="range" id="shiftSlider" min="1" max="25" value="3" class="shift-slider">
+                            <input type="number" id="shiftValue" min="1" max="25" value="3" class="shift-number">
+                        </div>
+                    </div>
+                    
+                    <div class="operation-control">
+                        <label class="label">Operation:</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="operation" value="encrypt" checked>
+                                <span class="radio-text">Encrypt</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="operation" value="decrypt">
+                                <span class="radio-text">Decrypt</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="processBtn" class="process-btn">
+                    <span class="btn-text">Transform Text</span>
+                    <div class="btn-ripple"></div>
+                </button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-group">
+                    <label class="label">Result:</label>
+                    <div class="output-container">
+                        <textarea id="outputText" class="text-output" readonly placeholder="Your transformed text will appear here..."></textarea>
+                        <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <h3>How it works</h3>
+                <p>The Caesar cipher shifts each letter by a fixed number of positions in the alphabet. It's one of the oldest and simplest encryption techniques!</p>
+            </div>
+            <div class="info-card">
+                <h3>History</h3>
+                <p>Named after Julius Caesar, who used it to protect his military communications around 50 BC.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Processing your message...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
